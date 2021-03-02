@@ -6,8 +6,8 @@ import (
 	log "github.com/sirupsen/logrus"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	logutil "github.com/argoproj/argo-rollouts/utils/log"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	logutil "github.com/akshaybhatt14495/argo-rollouts/utils/log"
 )
 
 type pauseContext struct {

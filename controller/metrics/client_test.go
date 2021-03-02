@@ -3,7 +3,7 @@ package metrics
 import (
 	"testing"
 
-	"github.com/argoproj/argo-rollouts/utils/kubeclientmetrics"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/kubeclientmetrics"
 )
 
 const expectedKubernetesRequest = `# TYPE controller_clientset_k8s_request_total counter

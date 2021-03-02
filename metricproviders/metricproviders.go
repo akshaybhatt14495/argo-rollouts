@@ -3,19 +3,19 @@ package metricproviders
 import (
 	"fmt"
 
-	"github.com/argoproj/argo-rollouts/metricproviders/wavefront"
+	"github.com/akshaybhatt14495/argo-rollouts/metricproviders/wavefront"
 
-	"github.com/argoproj/argo-rollouts/metricproviders/kayenta"
-	"github.com/argoproj/argo-rollouts/metricproviders/webmetric"
+	"github.com/akshaybhatt14495/argo-rollouts/metricproviders/kayenta"
+	"github.com/akshaybhatt14495/argo-rollouts/metricproviders/webmetric"
 
 	log "github.com/sirupsen/logrus"
 	"k8s.io/client-go/kubernetes"
 	batchlisters "k8s.io/client-go/listers/batch/v1"
 
-	"github.com/argoproj/argo-rollouts/metricproviders/job"
-	"github.com/argoproj/argo-rollouts/metricproviders/prometheus"
+	"github.com/akshaybhatt14495/argo-rollouts/metricproviders/job"
+	"github.com/akshaybhatt14495/argo-rollouts/metricproviders/prometheus"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
 )
 
 // Provider methods to query a external systems and generate a measurement

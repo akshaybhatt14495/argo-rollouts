@@ -8,7 +8,7 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/types"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
 )
 
 type ExperimentInfo struct {

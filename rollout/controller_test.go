@@ -38,15 +38,15 @@ import (
 	"k8s.io/kubernetes/pkg/controller"
 	"k8s.io/utils/pointer"
 
-	"github.com/argoproj/argo-rollouts/controller/metrics"
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/validation"
-	"github.com/argoproj/argo-rollouts/pkg/client/clientset/versioned/fake"
-	informers "github.com/argoproj/argo-rollouts/pkg/client/informers/externalversions"
-	"github.com/argoproj/argo-rollouts/utils/annotations"
-	"github.com/argoproj/argo-rollouts/utils/conditions"
-	"github.com/argoproj/argo-rollouts/utils/defaults"
-	istioutil "github.com/argoproj/argo-rollouts/utils/istio"
+	"github.com/akshaybhatt14495/argo-rollouts/controller/metrics"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/validation"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/client/clientset/versioned/fake"
+	informers "github.com/akshaybhatt14495/argo-rollouts/pkg/client/informers/externalversions"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/annotations"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/conditions"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/defaults"
+	istioutil "github.com/akshaybhatt14495/argo-rollouts/utils/istio"
 )
 
 var (

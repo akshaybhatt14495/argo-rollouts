@@ -17,14 +17,14 @@ import (
 	"k8s.io/client-go/util/workqueue"
 	"k8s.io/kubernetes/cmd/kubeadm/app/util"
 
-	"github.com/argoproj/argo-rollouts/controller/metrics"
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	clientset "github.com/argoproj/argo-rollouts/pkg/client/clientset/versioned"
-	informers "github.com/argoproj/argo-rollouts/pkg/client/informers/externalversions/rollouts/v1alpha1"
-	controllerutil "github.com/argoproj/argo-rollouts/utils/controller"
-	logutil "github.com/argoproj/argo-rollouts/utils/log"
-	serviceutil "github.com/argoproj/argo-rollouts/utils/service"
-	unstructuredutil "github.com/argoproj/argo-rollouts/utils/unstructured"
+	"github.com/akshaybhatt14495/argo-rollouts/controller/metrics"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	clientset "github.com/akshaybhatt14495/argo-rollouts/pkg/client/clientset/versioned"
+	informers "github.com/akshaybhatt14495/argo-rollouts/pkg/client/informers/externalversions/rollouts/v1alpha1"
+	controllerutil "github.com/akshaybhatt14495/argo-rollouts/utils/controller"
+	logutil "github.com/akshaybhatt14495/argo-rollouts/utils/log"
+	serviceutil "github.com/akshaybhatt14495/argo-rollouts/utils/service"
+	unstructuredutil "github.com/akshaybhatt14495/argo-rollouts/utils/unstructured"
 )
 
 const (

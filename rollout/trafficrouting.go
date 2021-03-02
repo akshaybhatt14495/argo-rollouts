@@ -3,12 +3,12 @@ package rollout
 import (
 	corev1 "k8s.io/api/core/v1"
 
-	"github.com/argoproj/argo-rollouts/rollout/trafficrouting/alb"
-	"github.com/argoproj/argo-rollouts/rollout/trafficrouting/istio"
-	"github.com/argoproj/argo-rollouts/rollout/trafficrouting/nginx"
-	"github.com/argoproj/argo-rollouts/rollout/trafficrouting/smi"
+	"github.com/akshaybhatt14495/argo-rollouts/rollout/trafficrouting/alb"
+	"github.com/akshaybhatt14495/argo-rollouts/rollout/trafficrouting/istio"
+	"github.com/akshaybhatt14495/argo-rollouts/rollout/trafficrouting/nginx"
+	"github.com/akshaybhatt14495/argo-rollouts/rollout/trafficrouting/smi"
 
-	replicasetutil "github.com/argoproj/argo-rollouts/utils/replicaset"
+	replicasetutil "github.com/akshaybhatt14495/argo-rollouts/utils/replicaset"
 )
 
 // TrafficRoutingReconciler common function across all TrafficRouting implementation

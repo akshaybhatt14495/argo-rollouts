@@ -9,9 +9,9 @@ import (
 	patchtypes "k8s.io/apimachinery/pkg/types"
 	"k8s.io/kubernetes/pkg/controller"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	rolloutsclient "github.com/argoproj/argo-rollouts/pkg/client/clientset/versioned/typed/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/utils/defaults"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	rolloutsclient "github.com/akshaybhatt14495/argo-rollouts/pkg/client/clientset/versioned/typed/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/defaults"
 )
 
 var terminateExperimentPatch = []byte(`{"spec":{"terminate":true}}`)

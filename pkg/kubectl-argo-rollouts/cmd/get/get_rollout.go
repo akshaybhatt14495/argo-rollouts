@@ -10,9 +10,9 @@ import (
 	"github.com/juju/ansiterm"
 	"github.com/spf13/cobra"
 
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/info"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/options"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/viewcontroller"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/info"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/options"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/viewcontroller"
 )
 
 const (

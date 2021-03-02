@@ -1,6 +1,7 @@
 package set
 
 import (
+	"context"
 	"fmt"
 	"strings"
 
@@ -10,8 +11,8 @@ import (
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/client-go/dynamic"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/options"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/options"
 )
 
 const (
@@ -66,7 +67,7 @@ func NewCmdSetImage(o *options.ArgoRolloutsOptions) *cobra.Command {
 // the marshalling)
 func SetImage(dynamicClient dynamic.Interface, namespace, rollout, container, image string) error {
 	rolloutIf := dynamicClient.Resource(v1alpha1.RolloutGVR).Namespace(namespace)
-	ro, err := rolloutIf.Get(rollout, metav1.GetOptions{})
+	ro, err := rolloutIf.Get(context.Background(), rollout, metav1.GetOptions{})
 	if err != nil {
 		return err
 	}
@@ -74,7 +75,7 @@ func SetImage(dynamicClient dynamic.Interface, namespace, rollout, container, im
 	if err != nil {
 		return err
 	}
-	_, err = rolloutIf.Update(newRo, metav1.UpdateOptions{})
+	_, err = rolloutIf.Update(context.Background(), newRo, metav1.UpdateOptions{})
 	if err != nil {
 		return err
 	}

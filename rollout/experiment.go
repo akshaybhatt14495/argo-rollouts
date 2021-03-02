@@ -3,11 +3,11 @@ package rollout
 import (
 	"fmt"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	analysisutil "github.com/argoproj/argo-rollouts/utils/analysis"
-	"github.com/argoproj/argo-rollouts/utils/annotations"
-	experimentutil "github.com/argoproj/argo-rollouts/utils/experiment"
-	replicasetutil "github.com/argoproj/argo-rollouts/utils/replicaset"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	analysisutil "github.com/akshaybhatt14495/argo-rollouts/utils/analysis"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/annotations"
+	experimentutil "github.com/akshaybhatt14495/argo-rollouts/utils/experiment"
+	replicasetutil "github.com/akshaybhatt14495/argo-rollouts/utils/replicaset"
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"

@@ -10,7 +10,7 @@ import (
 	"k8s.io/kubernetes/pkg/controller"
 	"k8s.io/utils/pointer"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
 )
 
 var (

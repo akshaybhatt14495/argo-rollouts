@@ -1,6 +1,7 @@
 package nginx
 
 import (
+	"context"
 	"fmt"
 	"strings"
 
@@ -15,11 +16,11 @@ import (
 	extensionslisters "k8s.io/client-go/listers/extensions/v1beta1"
 	"k8s.io/client-go/tools/record"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/utils/defaults"
-	"github.com/argoproj/argo-rollouts/utils/diff"
-	ingressutil "github.com/argoproj/argo-rollouts/utils/ingress"
-	logutil "github.com/argoproj/argo-rollouts/utils/log"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/defaults"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/diff"
+	ingressutil "github.com/akshaybhatt14495/argo-rollouts/utils/ingress"
+	logutil "github.com/akshaybhatt14495/argo-rollouts/utils/log"
 )
 
 // Type holds this controller type
@@ -174,7 +175,7 @@ func (r *Reconciler) Reconcile(desiredWeight int32) error {
 	if !canaryIngressExists {
 		r.log.WithField(logutil.IngressKey, canaryIngressName).WithField("desiredWeight", desiredWeight).Info("Creating canary Ingress")
 		r.cfg.Recorder.Event(r.cfg.Rollout, corev1.EventTypeNormal, "CreatingCanaryIngress", fmt.Sprintf("Creating canary ingress `%s` with weight `%d`", canaryIngressName, desiredWeight))
-		_, err = r.cfg.Client.ExtensionsV1beta1().Ingresses(r.cfg.Rollout.Namespace).Create(desiredCanaryIngress)
+		_, err = r.cfg.Client.ExtensionsV1beta1().Ingresses(r.cfg.Rollout.Namespace).Create(context.Background(), desiredCanaryIngress, metav1.CreateOptions{})
 		if err == nil {
 			return nil
 		}
@@ -185,7 +186,7 @@ func (r *Reconciler) Reconcile(desiredWeight int32) error {
 		// Canary ingress was created by a different reconcile call before this one could complete (race)
 		// This means we just read it from the API now (instead of cache) and continue with the normal
 		// flow we take when the canary already existed.
-		canaryIngress, err = r.cfg.Client.ExtensionsV1beta1().Ingresses(r.cfg.Rollout.Namespace).Get(canaryIngressName, metav1.GetOptions{})
+		canaryIngress, err = r.cfg.Client.ExtensionsV1beta1().Ingresses(r.cfg.Rollout.Namespace).Get(context.Background(), canaryIngressName, metav1.GetOptions{})
 		if err != nil {
 			r.log.WithField(logutil.IngressKey, canaryIngressName).Error(err.Error())
 			return fmt.Errorf("error retrieving canary ingress `%s` from api: %v", canaryIngressName, err)
@@ -216,7 +217,7 @@ func (r *Reconciler) Reconcile(desiredWeight int32) error {
 	r.log.WithField(logutil.IngressKey, canaryIngressName).WithField("desiredWeight", desiredWeight).Info("updating canary Ingress")
 	r.cfg.Recorder.Event(r.cfg.Rollout, corev1.EventTypeNormal, "PatchingCanaryIngress", fmt.Sprintf("Updating Ingress `%s` to desiredWeight '%d'", canaryIngressName, desiredWeight))
 
-	_, err = r.cfg.Client.ExtensionsV1beta1().Ingresses(r.cfg.Rollout.Namespace).Patch(canaryIngressName, types.MergePatchType, patch)
+	_, err = r.cfg.Client.ExtensionsV1beta1().Ingresses(r.cfg.Rollout.Namespace).Patch(context.Background(),canaryIngressName, types.MergePatchType, patch, metav1.PatchOptions{})
 	if err != nil {
 		r.log.WithField(logutil.IngressKey, canaryIngressName).WithField("err", err.Error()).Error("error patching canary ingress")
 		return fmt.Errorf("error patching canary ingress `%s`: %v", canaryIngressName, err)

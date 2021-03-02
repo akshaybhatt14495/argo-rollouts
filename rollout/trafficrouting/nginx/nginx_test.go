@@ -17,8 +17,8 @@ import (
 	k8stesting "k8s.io/client-go/testing"
 	"k8s.io/client-go/tools/record"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	ingressutil "github.com/argoproj/argo-rollouts/utils/ingress"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	ingressutil "github.com/akshaybhatt14495/argo-rollouts/utils/ingress"
 )
 
 func ingress(name string, port int, serviceName string) *extensionsv1beta1.Ingress {

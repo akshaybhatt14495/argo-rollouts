@@ -17,10 +17,10 @@ import (
 	"k8s.io/kubernetes/pkg/controller"
 	"k8s.io/utils/pointer"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/pkg/client/clientset/versioned/fake"
-	"github.com/argoproj/argo-rollouts/utils/annotations"
-	"github.com/argoproj/argo-rollouts/utils/conditions"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/client/clientset/versioned/fake"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/annotations"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/conditions"
 )
 
 func newCanaryRollout(name string, replicas int, revisionHistoryLimit *int32, steps []v1alpha1.CanaryStep, stepIndex *int32, maxSurge, maxUnavailable intstr.IntOrString) *v1alpha1.Rollout {

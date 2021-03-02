@@ -10,11 +10,11 @@ import (
 	"k8s.io/kubernetes/pkg/controller"
 	"k8s.io/utils/pointer"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/utils/conditions"
-	"github.com/argoproj/argo-rollouts/utils/defaults"
-	logutil "github.com/argoproj/argo-rollouts/utils/log"
-	replicasetutil "github.com/argoproj/argo-rollouts/utils/replicaset"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/conditions"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/defaults"
+	logutil "github.com/akshaybhatt14495/argo-rollouts/utils/log"
+	replicasetutil "github.com/akshaybhatt14495/argo-rollouts/utils/replicaset"
 )
 
 func (c *Controller) rolloutCanary(rollout *v1alpha1.Rollout, rsList []*appsv1.ReplicaSet) error {

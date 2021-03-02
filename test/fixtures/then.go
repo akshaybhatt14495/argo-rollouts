@@ -9,10 +9,10 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	rov1 "github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/info"
-	"github.com/argoproj/argo-rollouts/utils/defaults"
-	replicasetutil "github.com/argoproj/argo-rollouts/utils/replicaset"
+	rov1 "github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/info"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/defaults"
+	replicasetutil "github.com/akshaybhatt14495/argo-rollouts/utils/replicaset"
 )
 
 type Then struct {

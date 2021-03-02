@@ -19,10 +19,11 @@ limitations under the License.
 package v1alpha1
 
 import (
+	"context"
 	"time"
 
-	v1alpha1 "github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	scheme "github.com/argoproj/argo-rollouts/pkg/client/clientset/versioned/scheme"
+	v1alpha1 "github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	scheme "github.com/akshaybhatt14495/argo-rollouts/pkg/client/clientset/versioned/scheme"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
@@ -71,7 +72,7 @@ func (c *experiments) Get(name string, options v1.GetOptions) (result *v1alpha1.
 		Resource("experiments").
 		Name(name).
 		VersionedParams(&options, scheme.ParameterCodec).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }
@@ -88,7 +89,7 @@ func (c *experiments) List(opts v1.ListOptions) (result *v1alpha1.ExperimentList
 		Resource("experiments").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Timeout(timeout).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }
@@ -105,7 +106,7 @@ func (c *experiments) Watch(opts v1.ListOptions) (watch.Interface, error) {
 		Resource("experiments").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Timeout(timeout).
-		Watch()
+		Watch(context.Background())
 }
 
 // Create takes the representation of a experiment and creates it.  Returns the server's representation of the experiment, and an error, if there is any.
@@ -115,7 +116,7 @@ func (c *experiments) Create(experiment *v1alpha1.Experiment) (result *v1alpha1.
 		Namespace(c.ns).
 		Resource("experiments").
 		Body(experiment).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }
@@ -128,7 +129,7 @@ func (c *experiments) Update(experiment *v1alpha1.Experiment) (result *v1alpha1.
 		Resource("experiments").
 		Name(experiment.Name).
 		Body(experiment).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }
@@ -144,7 +145,7 @@ func (c *experiments) UpdateStatus(experiment *v1alpha1.Experiment) (result *v1a
 		Name(experiment.Name).
 		SubResource("status").
 		Body(experiment).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }
@@ -156,7 +157,7 @@ func (c *experiments) Delete(name string, options *v1.DeleteOptions) error {
 		Resource("experiments").
 		Name(name).
 		Body(options).
-		Do().
+		Do(context.Background()).
 		Error()
 }
 
@@ -172,7 +173,7 @@ func (c *experiments) DeleteCollection(options *v1.DeleteOptions, listOptions v1
 		VersionedParams(&listOptions, scheme.ParameterCodec).
 		Timeout(timeout).
 		Body(options).
-		Do().
+		Do(context.Background()).
 		Error()
 }
 
@@ -185,7 +186,7 @@ func (c *experiments) Patch(name string, pt types.PatchType, data []byte, subres
 		SubResource(subresources...).
 		Name(name).
 		Body(data).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }

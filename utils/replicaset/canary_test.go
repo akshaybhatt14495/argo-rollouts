@@ -9,7 +9,7 @@ import (
 	"k8s.io/apimachinery/pkg/util/intstr"
 	"k8s.io/utils/pointer"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
 )
 
 func newRollout(specReplicas, setWeight int32, maxSurge, maxUnavailable intstr.IntOrString, currentPodHash, stablePodHash string) *v1alpha1.Rollout {

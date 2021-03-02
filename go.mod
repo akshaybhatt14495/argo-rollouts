@@ -3,35 +3,36 @@ module github.com/akshaybhatt14495/argo-rollouts
 go 1.13
 
 require (
-	github.com/antonmedv/expr v1.4.2
+	github.com/antlr/antlr4 v0.0.0-20191011202612-ad2bd05285ca // indirect
+	github.com/antonmedv/expr v1.8.9
 	github.com/argoproj/pkg v0.0.0-20200624215116-23e74cb168fe
 	github.com/bouk/monkey v1.0.0
+	github.com/coreos/go-etcd v2.0.0+incompatible // indirect
+	github.com/cpuguy83/go-md2man v1.0.10 // indirect
 	github.com/cucumber/godog v0.10.0
 	github.com/docker/spdystream v0.0.0-20181023171402-6480d4af844c // indirect
 	github.com/ghodss/yaml v1.0.1-0.20190212211648-25d852aebe32
 	github.com/go-openapi/spec v0.19.3
 	github.com/gofrs/uuid v3.3.0+incompatible // indirect
 	github.com/gregjones/httpcache v0.0.0-20190611155906-901d90724c79 // indirect
-	github.com/imdario/mergo v0.3.6 // indirect
 	github.com/jstemmer/go-junit-report v0.9.1
 	github.com/juju/ansiterm v0.0.0-20180109212912-720a0952cc2a
 	github.com/lunixbochs/vtclean v1.0.0 // indirect
-	github.com/mattn/go-colorable v0.1.4 // indirect
-	github.com/mattn/go-isatty v0.0.10 // indirect
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.7.1
 	github.com/prometheus/common v0.10.0
-	github.com/servicemeshinterface/smi-sdk-go v0.3.0
-	github.com/sirupsen/logrus v1.6.0
-	github.com/spaceapegames/go-wavefront v1.6.2
+	github.com/servicemeshinterface/smi-sdk-go v0.4.1
+	github.com/sirupsen/logrus v1.7.0
+	github.com/spaceapegames/go-wavefront v1.8.1
 	github.com/spf13/cobra v1.1.1
 	github.com/stretchr/testify v1.6.1
-	github.com/valyala/fasttemplate v1.0.1
+	github.com/ugorji/go/codec v0.0.0-20181204163529-d75b2dcb6bc8 // indirect
+	github.com/valyala/fasttemplate v1.2.1
 	github.com/vektra/mockery v1.1.2
-	gopkg.in/yaml.v2 v2.2.8
+	gopkg.in/yaml.v2 v2.3.0
 	gopkg.in/yaml.v3 v3.0.0-20200615113413-eeeca48fe776 // indirect
 	k8s.io/api v0.20.4
-	k8s.io/apiextensions-apiserver v0.17.0
+	k8s.io/apiextensions-apiserver v0.18.2
 	k8s.io/apimachinery v0.20.4
 	k8s.io/apiserver v0.20.1
 	k8s.io/cli-runtime v0.20.1
@@ -40,10 +41,10 @@ require (
 	k8s.io/component-base v0.20.1
 	k8s.io/klog v1.0.0
 	k8s.io/kube-openapi v0.0.0-20201113171705-d219536bb9fd
-	k8s.io/kubectl v0.16.4
-	k8s.io/kubernetes v1.17.3
+	k8s.io/kubectl v0.19.3
+	k8s.io/kubernetes v1.18.2
 	k8s.io/utils v0.0.0-20201110183641-67b214c5f920
-	sigs.k8s.io/controller-tools v0.2.5
+	sigs.k8s.io/controller-tools v0.4.0
 )
 
 replace (

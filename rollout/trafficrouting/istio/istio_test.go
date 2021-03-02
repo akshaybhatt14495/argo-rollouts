@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	istioutil "github.com/argoproj/argo-rollouts/utils/istio"
+	istioutil "github.com/akshaybhatt14495/argo-rollouts/utils/istio"
 
 	"k8s.io/client-go/dynamic"
 	"k8s.io/client-go/dynamic/dynamicinformer"
@@ -20,7 +20,7 @@ import (
 	"k8s.io/client-go/dynamic/fake"
 	"k8s.io/client-go/tools/record"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
 )
 
 func strToUnstructured(yamlStr string) *unstructured.Unstructured {

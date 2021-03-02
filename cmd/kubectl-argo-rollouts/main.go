@@ -9,8 +9,8 @@ import (
 	_ "k8s.io/client-go/plugin/pkg/client/auth/oidc"
 	"k8s.io/klog"
 
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/options"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/options"
 )
 
 func main() {

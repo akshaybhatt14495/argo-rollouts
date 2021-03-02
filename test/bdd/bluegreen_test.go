@@ -10,9 +10,9 @@ import (
 	"github.com/cucumber/godog"
 	"k8s.io/cli-runtime/pkg/genericclioptions"
 
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/promote"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/set"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/options"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/promote"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/set"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/options"
 	argoexec "github.com/argoproj/pkg/exec"
 )
 

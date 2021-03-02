@@ -1,6 +1,7 @@
 package job
 
 import (
+	"context"
 	"errors"
 	"fmt"
 	"sort"
@@ -13,9 +14,9 @@ import (
 	"k8s.io/client-go/kubernetes"
 	batchlisters "k8s.io/client-go/listers/batch/v1"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	analysisutil "github.com/argoproj/argo-rollouts/utils/analysis"
-	metricutil "github.com/argoproj/argo-rollouts/utils/metric"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	analysisutil "github.com/akshaybhatt14495/argo-rollouts/utils/analysis"
+	metricutil "github.com/akshaybhatt14495/argo-rollouts/utils/metric"
 )
 
 const (
@@ -102,13 +103,13 @@ func (p *JobProvider) Run(run *v1alpha1.AnalysisRun, metric v1alpha1.Metric) v1a
 		return metricutil.MarkMeasurementError(measurement, err)
 	}
 	jobIf := p.kubeclientset.BatchV1().Jobs(run.Namespace)
-	createdJob, createErr := jobIf.Create(job)
+	createdJob, createErr := jobIf.Create(context.Background(), job, metav1.CreateOptions{})
 	if createErr != nil {
 		if !k8serrors.IsAlreadyExists(createErr) {
 			p.logCtx.Errorf("job create %s failed: %v", job.Name, createErr)
 			return metricutil.MarkMeasurementError(measurement, createErr)
 		}
-		existingJob, err := jobIf.Get(job.Name, metav1.GetOptions{})
+		existingJob, err := jobIf.Get(context.Background(), job.Name, metav1.GetOptions{})
 		if err != nil {
 			p.logCtx.Errorf("job create (verify) %s failed: %v", job.Name, createErr)
 			return metricutil.MarkMeasurementError(measurement, createErr)
@@ -183,7 +184,7 @@ func (p *JobProvider) deleteJob(namespace, jobName string) error {
 	deleteOpts := metav1.DeleteOptions{PropagationPolicy: &foregroundDelete}
 
 	// TODO(jessesuen): retry
-	err := p.kubeclientset.BatchV1().Jobs(namespace).Delete(jobName, &deleteOpts)
+	err := p.kubeclientset.BatchV1().Jobs(namespace).Delete(context.Background(), jobName, deleteOpts)
 	if err != nil && !k8serrors.IsNotFound(err) {
 		return err
 	}

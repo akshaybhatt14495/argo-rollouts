@@ -3,9 +3,9 @@ package analysis
 import (
 	patchtypes "k8s.io/apimachinery/pkg/types"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/utils/diff"
-	logutil "github.com/argoproj/argo-rollouts/utils/log"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/diff"
+	logutil "github.com/akshaybhatt14495/argo-rollouts/utils/log"
 )
 
 func (c *Controller) persistAnalysisRunStatus(orig *v1alpha1.AnalysisRun, newStatus v1alpha1.AnalysisRunStatus) error {

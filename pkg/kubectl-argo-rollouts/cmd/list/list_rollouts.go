@@ -9,9 +9,9 @@ import (
 	"github.com/spf13/cobra"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	argoprojv1alpha1 "github.com/argoproj/argo-rollouts/pkg/client/clientset/versioned/typed/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/options"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	argoprojv1alpha1 "github.com/akshaybhatt14495/argo-rollouts/pkg/client/clientset/versioned/typed/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/options"
 )
 
 const (

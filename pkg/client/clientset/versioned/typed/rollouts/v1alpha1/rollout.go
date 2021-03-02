@@ -19,10 +19,11 @@ limitations under the License.
 package v1alpha1
 
 import (
+	"context"
 	"time"
 
-	v1alpha1 "github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	scheme "github.com/argoproj/argo-rollouts/pkg/client/clientset/versioned/scheme"
+	v1alpha1 "github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	scheme "github.com/akshaybhatt14495/argo-rollouts/pkg/client/clientset/versioned/scheme"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
@@ -70,7 +71,7 @@ func (c *rollouts) Get(name string, options v1.GetOptions) (result *v1alpha1.Rol
 		Resource("rollouts").
 		Name(name).
 		VersionedParams(&options, scheme.ParameterCodec).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }
@@ -87,7 +88,7 @@ func (c *rollouts) List(opts v1.ListOptions) (result *v1alpha1.RolloutList, err 
 		Resource("rollouts").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Timeout(timeout).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }
@@ -104,7 +105,7 @@ func (c *rollouts) Watch(opts v1.ListOptions) (watch.Interface, error) {
 		Resource("rollouts").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Timeout(timeout).
-		Watch()
+		Watch(context.Background())
 }
 
 // Create takes the representation of a rollout and creates it.  Returns the server's representation of the rollout, and an error, if there is any.
@@ -114,7 +115,7 @@ func (c *rollouts) Create(rollout *v1alpha1.Rollout) (result *v1alpha1.Rollout, 
 		Namespace(c.ns).
 		Resource("rollouts").
 		Body(rollout).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }
@@ -127,7 +128,7 @@ func (c *rollouts) Update(rollout *v1alpha1.Rollout) (result *v1alpha1.Rollout, 
 		Resource("rollouts").
 		Name(rollout.Name).
 		Body(rollout).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }
@@ -139,7 +140,7 @@ func (c *rollouts) Delete(name string, options *v1.DeleteOptions) error {
 		Resource("rollouts").
 		Name(name).
 		Body(options).
-		Do().
+		Do(context.Background()).
 		Error()
 }
 
@@ -155,7 +156,7 @@ func (c *rollouts) DeleteCollection(options *v1.DeleteOptions, listOptions v1.Li
 		VersionedParams(&listOptions, scheme.ParameterCodec).
 		Timeout(timeout).
 		Body(options).
-		Do().
+		Do(context.Background()).
 		Error()
 }
 
@@ -168,7 +169,7 @@ func (c *rollouts) Patch(name string, pt types.PatchType, data []byte, subresour
 		SubResource(subresources...).
 		Name(name).
 		Body(data).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }

@@ -15,8 +15,8 @@ import (
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v2"
 
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd"
-	options "github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/options/fake"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd"
+	options "github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/options/fake"
 )
 
 func main() {

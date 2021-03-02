@@ -6,7 +6,7 @@ import (
 	"github.com/spf13/cobra"
 	types "k8s.io/apimachinery/pkg/types"
 
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/options"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/options"
 )
 
 const (

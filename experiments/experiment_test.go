@@ -17,11 +17,11 @@ import (
 	kubetesting "k8s.io/client-go/testing"
 	"k8s.io/client-go/tools/record"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/pkg/client/clientset/versioned/fake"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/client/clientset/versioned/fake"
 
-	informers "github.com/argoproj/argo-rollouts/pkg/client/informers/externalversions"
-	"github.com/argoproj/argo-rollouts/utils/conditions"
+	informers "github.com/akshaybhatt14495/argo-rollouts/pkg/client/informers/externalversions"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/conditions"
 )
 
 func newTestContext(ex *v1alpha1.Experiment, objects ...runtime.Object) *experimentContext {

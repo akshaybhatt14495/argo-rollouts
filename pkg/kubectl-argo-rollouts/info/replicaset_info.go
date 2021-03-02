@@ -11,8 +11,8 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/apimachinery/pkg/util/duration"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	replicasetutil "github.com/argoproj/argo-rollouts/utils/replicaset"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	replicasetutil "github.com/akshaybhatt14495/argo-rollouts/utils/replicaset"
 )
 
 type ReplicaSetInfo struct {

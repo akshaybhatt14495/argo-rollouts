@@ -4,14 +4,14 @@ import (
 	"sort"
 	"time"
 
-	"github.com/argoproj/argo-rollouts/utils/defaults"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/defaults"
 
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 
-	"github.com/argoproj/argo-rollouts/utils/replicaset"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/replicaset"
 )
 
 const (

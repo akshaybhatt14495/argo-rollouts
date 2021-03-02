@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/suite"
 	appsv1 "k8s.io/api/apps/v1"
 
-	"github.com/argoproj/argo-rollouts/test/fixtures"
+	"github.com/akshaybhatt14495/argo-rollouts/test/fixtures"
 )
 
 type FunctionalSuite struct {

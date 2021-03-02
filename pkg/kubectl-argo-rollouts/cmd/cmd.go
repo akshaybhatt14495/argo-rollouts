@@ -3,18 +3,18 @@ package cmd
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/abort"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/create"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/get"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/list"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/pause"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/promote"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/restart"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/retry"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/set"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/terminate"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/version"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/options"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/abort"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/create"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/get"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/list"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/pause"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/promote"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/restart"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/retry"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/set"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/terminate"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/version"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/options"
 )
 
 const (

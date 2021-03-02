@@ -12,8 +12,8 @@ VERSION="v1alpha1"
 
 go run ${CODEGEN_PKG}/cmd/openapi-gen/openapi-gen.go \
   --go-header-file ${PROJECT_ROOT}/hack/custom-boilerplate.go.txt \
-  --input-dirs github.com/argoproj/argo-rollouts/pkg/apis/rollouts/${VERSION} \
-  --output-package github.com/argoproj/argo-rollouts/pkg/apis/rollouts/${VERSION} \
+  --input-dirs github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/${VERSION} \
+  --output-package github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/${VERSION} \
   --report-filename pkg/apis/api-rules/violation_exceptions.list \
   $@
 

@@ -20,12 +20,12 @@ trap "cleanup" EXIT SIGINT
 chmod +x ${CODEGEN_PKG}/generate-groups.sh
 
 ${CODEGEN_PKG}/generate-groups.sh "deepcopy,client,informer,lister" \
-  github.com/argoproj/argo-rollouts/pkg/client github.com/argoproj/argo-rollouts/pkg/apis \
+  github.com/akshaybhatt14495/argo-rollouts/pkg/client github.com/akshaybhatt14495/argo-rollouts/pkg/apis \
   "rollouts:v1alpha1" \
   --output-base "${TEMP_DIR}" \
   --go-header-file ${SCRIPT_ROOT}/hack/boilerplate.go.txt
 
-cp -r "${TEMP_DIR}/github.com/argoproj/argo-rollouts/." "${SCRIPT_ROOT}/"
+cp -r "${TEMP_DIR}/github.com/akshaybhatt14495/argo-rollouts/." "${SCRIPT_ROOT}/"
 # To use your own boilerplate text use:
 #   --go-header-file ${SCRIPT_ROOT}/hack/custom-boilerplate.go.txt
 

@@ -19,10 +19,11 @@ limitations under the License.
 package v1alpha1
 
 import (
+	"context"
 	"time"
 
-	v1alpha1 "github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	scheme "github.com/argoproj/argo-rollouts/pkg/client/clientset/versioned/scheme"
+	v1alpha1 "github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	scheme "github.com/akshaybhatt14495/argo-rollouts/pkg/client/clientset/versioned/scheme"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
@@ -70,7 +71,7 @@ func (c *analysisTemplates) Get(name string, options v1.GetOptions) (result *v1a
 		Resource("analysistemplates").
 		Name(name).
 		VersionedParams(&options, scheme.ParameterCodec).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }
@@ -87,7 +88,7 @@ func (c *analysisTemplates) List(opts v1.ListOptions) (result *v1alpha1.Analysis
 		Resource("analysistemplates").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Timeout(timeout).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }
@@ -104,7 +105,7 @@ func (c *analysisTemplates) Watch(opts v1.ListOptions) (watch.Interface, error) 
 		Resource("analysistemplates").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Timeout(timeout).
-		Watch()
+		Watch(context.Background())
 }
 
 // Create takes the representation of a analysisTemplate and creates it.  Returns the server's representation of the analysisTemplate, and an error, if there is any.
@@ -114,7 +115,7 @@ func (c *analysisTemplates) Create(analysisTemplate *v1alpha1.AnalysisTemplate) 
 		Namespace(c.ns).
 		Resource("analysistemplates").
 		Body(analysisTemplate).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }
@@ -127,7 +128,7 @@ func (c *analysisTemplates) Update(analysisTemplate *v1alpha1.AnalysisTemplate) 
 		Resource("analysistemplates").
 		Name(analysisTemplate.Name).
 		Body(analysisTemplate).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }
@@ -139,7 +140,7 @@ func (c *analysisTemplates) Delete(name string, options *v1.DeleteOptions) error
 		Resource("analysistemplates").
 		Name(name).
 		Body(options).
-		Do().
+		Do(context.Background()).
 		Error()
 }
 
@@ -155,7 +156,7 @@ func (c *analysisTemplates) DeleteCollection(options *v1.DeleteOptions, listOpti
 		VersionedParams(&listOptions, scheme.ParameterCodec).
 		Timeout(timeout).
 		Body(options).
-		Do().
+		Do(context.Background()).
 		Error()
 }
 
@@ -168,7 +169,7 @@ func (c *analysisTemplates) Patch(name string, pt types.PatchType, data []byte, 
 		SubResource(subresources...).
 		Name(name).
 		Body(data).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }

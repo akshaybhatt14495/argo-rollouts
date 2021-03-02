@@ -37,7 +37,7 @@
     git push $REPO $BRANCH
     ```
 
-1. Create a [Github releases](https://github.com/argoproj/argo-rollouts/releases) pointing at the release branch with the following content:
+1. Create a [Github releases](https://github.com/akshaybhatt14495/argo-rollouts/releases) pointing at the release branch with the following content:
    * Getting started (copy from previous release and new version)
    * Changelog
 

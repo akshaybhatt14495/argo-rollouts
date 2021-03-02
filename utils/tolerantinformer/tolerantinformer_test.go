@@ -10,8 +10,8 @@ import (
 	"k8s.io/client-go/dynamic/dynamicinformer"
 	dynamicfake "k8s.io/client-go/dynamic/fake"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	testutil "github.com/argoproj/argo-rollouts/test/util"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	testutil "github.com/akshaybhatt14495/argo-rollouts/test/util"
 )
 
 const (

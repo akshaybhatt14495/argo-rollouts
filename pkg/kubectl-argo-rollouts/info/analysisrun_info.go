@@ -5,9 +5,9 @@ import (
 
 	"k8s.io/apimachinery/pkg/types"
 
-	"github.com/argoproj/argo-rollouts/metricproviders/job"
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	analysisutil "github.com/argoproj/argo-rollouts/utils/analysis"
+	"github.com/akshaybhatt14495/argo-rollouts/metricproviders/job"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	analysisutil "github.com/akshaybhatt14495/argo-rollouts/utils/analysis"
 )
 
 type AnalysisRunInfo struct {

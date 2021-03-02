@@ -22,12 +22,12 @@ import (
 	"k8s.io/client-go/tools/record"
 	"k8s.io/client-go/util/workqueue"
 
-	"github.com/argoproj/argo-rollouts/controller/metrics"
-	"github.com/argoproj/argo-rollouts/metricproviders"
-	"github.com/argoproj/argo-rollouts/metricproviders/mocks"
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/pkg/client/clientset/versioned/fake"
-	informers "github.com/argoproj/argo-rollouts/pkg/client/informers/externalversions"
+	"github.com/akshaybhatt14495/argo-rollouts/controller/metrics"
+	"github.com/akshaybhatt14495/argo-rollouts/metricproviders"
+	"github.com/akshaybhatt14495/argo-rollouts/metricproviders/mocks"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/client/clientset/versioned/fake"
+	informers "github.com/akshaybhatt14495/argo-rollouts/pkg/client/informers/externalversions"
 )
 
 var (

@@ -15,13 +15,13 @@ import (
 	"k8s.io/client-go/util/workqueue"
 	"k8s.io/kubernetes/cmd/kubeadm/app/util"
 
-	"github.com/argoproj/argo-rollouts/controller/metrics"
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	informers "github.com/argoproj/argo-rollouts/pkg/client/informers/externalversions/rollouts/v1alpha1"
-	controllerutil "github.com/argoproj/argo-rollouts/utils/controller"
-	ingressutil "github.com/argoproj/argo-rollouts/utils/ingress"
-	logutil "github.com/argoproj/argo-rollouts/utils/log"
-	unstructuredutil "github.com/argoproj/argo-rollouts/utils/unstructured"
+	"github.com/akshaybhatt14495/argo-rollouts/controller/metrics"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	informers "github.com/akshaybhatt14495/argo-rollouts/pkg/client/informers/externalversions/rollouts/v1alpha1"
+	controllerutil "github.com/akshaybhatt14495/argo-rollouts/utils/controller"
+	ingressutil "github.com/akshaybhatt14495/argo-rollouts/utils/ingress"
+	logutil "github.com/akshaybhatt14495/argo-rollouts/utils/log"
+	unstructuredutil "github.com/akshaybhatt14495/argo-rollouts/utils/unstructured"
 )
 
 const (

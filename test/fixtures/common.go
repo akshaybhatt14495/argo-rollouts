@@ -17,10 +17,10 @@ import (
 	"k8s.io/client-go/dynamic"
 	"k8s.io/client-go/kubernetes"
 
-	rov1 "github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	clientset "github.com/argoproj/argo-rollouts/pkg/client/clientset/versioned"
-	"github.com/argoproj/argo-rollouts/utils/annotations"
-	unstructuredutil "github.com/argoproj/argo-rollouts/utils/unstructured"
+	rov1 "github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	clientset "github.com/akshaybhatt14495/argo-rollouts/pkg/client/clientset/versioned"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/annotations"
+	unstructuredutil "github.com/akshaybhatt14495/argo-rollouts/utils/unstructured"
 )
 
 //nolint:structcheck

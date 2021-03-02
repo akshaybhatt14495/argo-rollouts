@@ -23,9 +23,9 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 	"k8s.io/klog"
 
-	rov1 "github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	clientset "github.com/argoproj/argo-rollouts/pkg/client/clientset/versioned"
-	istioutil "github.com/argoproj/argo-rollouts/utils/istio"
+	rov1 "github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	clientset "github.com/akshaybhatt14495/argo-rollouts/pkg/client/clientset/versioned"
+	istioutil "github.com/akshaybhatt14495/argo-rollouts/utils/istio"
 )
 
 const (

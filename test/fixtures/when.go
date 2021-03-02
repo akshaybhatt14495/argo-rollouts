@@ -15,12 +15,12 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/apimachinery/pkg/util/strategicpatch"
 
-	rov1 "github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/abort"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/promote"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/restart"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/retry"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/info"
+	rov1 "github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/abort"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/promote"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/restart"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/cmd/retry"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/info"
 )
 
 type When struct {

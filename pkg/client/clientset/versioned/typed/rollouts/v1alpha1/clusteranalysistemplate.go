@@ -19,10 +19,11 @@ limitations under the License.
 package v1alpha1
 
 import (
+	"context"
 	"time"
 
-	v1alpha1 "github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	scheme "github.com/argoproj/argo-rollouts/pkg/client/clientset/versioned/scheme"
+	v1alpha1 "github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	scheme "github.com/akshaybhatt14495/argo-rollouts/pkg/client/clientset/versioned/scheme"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
@@ -67,7 +68,7 @@ func (c *clusterAnalysisTemplates) Get(name string, options v1.GetOptions) (resu
 		Resource("clusteranalysistemplates").
 		Name(name).
 		VersionedParams(&options, scheme.ParameterCodec).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }
@@ -83,7 +84,7 @@ func (c *clusterAnalysisTemplates) List(opts v1.ListOptions) (result *v1alpha1.C
 		Resource("clusteranalysistemplates").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Timeout(timeout).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }
@@ -99,7 +100,7 @@ func (c *clusterAnalysisTemplates) Watch(opts v1.ListOptions) (watch.Interface, 
 		Resource("clusteranalysistemplates").
 		VersionedParams(&opts, scheme.ParameterCodec).
 		Timeout(timeout).
-		Watch()
+		Watch(context.Background())
 }
 
 // Create takes the representation of a clusterAnalysisTemplate and creates it.  Returns the server's representation of the clusterAnalysisTemplate, and an error, if there is any.
@@ -108,7 +109,7 @@ func (c *clusterAnalysisTemplates) Create(clusterAnalysisTemplate *v1alpha1.Clus
 	err = c.client.Post().
 		Resource("clusteranalysistemplates").
 		Body(clusterAnalysisTemplate).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }
@@ -120,7 +121,7 @@ func (c *clusterAnalysisTemplates) Update(clusterAnalysisTemplate *v1alpha1.Clus
 		Resource("clusteranalysistemplates").
 		Name(clusterAnalysisTemplate.Name).
 		Body(clusterAnalysisTemplate).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }
@@ -131,7 +132,7 @@ func (c *clusterAnalysisTemplates) Delete(name string, options *v1.DeleteOptions
 		Resource("clusteranalysistemplates").
 		Name(name).
 		Body(options).
-		Do().
+		Do(context.Background()).
 		Error()
 }
 
@@ -146,7 +147,7 @@ func (c *clusterAnalysisTemplates) DeleteCollection(options *v1.DeleteOptions, l
 		VersionedParams(&listOptions, scheme.ParameterCodec).
 		Timeout(timeout).
 		Body(options).
-		Do().
+		Do(context.Background()).
 		Error()
 }
 
@@ -158,7 +159,7 @@ func (c *clusterAnalysisTemplates) Patch(name string, pt types.PatchType, data [
 		SubResource(subresources...).
 		Name(name).
 		Body(data).
-		Do().
+		Do(context.Background()).
 		Into(result)
 	return
 }

@@ -12,9 +12,9 @@ import (
 	"k8s.io/apimachinery/pkg/util/rand"
 	hashutil "k8s.io/kubernetes/pkg/util/hash"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/utils/defaults"
-	logutil "github.com/argoproj/argo-rollouts/utils/log"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/defaults"
+	logutil "github.com/akshaybhatt14495/argo-rollouts/utils/log"
 )
 
 const (

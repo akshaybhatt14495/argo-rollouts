@@ -10,9 +10,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"k8s.io/apimachinery/pkg/labels"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	lister "github.com/argoproj/argo-rollouts/pkg/client/listers/rollouts/v1alpha1"
-	logutil "github.com/argoproj/argo-rollouts/utils/log"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	lister "github.com/akshaybhatt14495/argo-rollouts/pkg/client/listers/rollouts/v1alpha1"
+	logutil "github.com/akshaybhatt14495/argo-rollouts/utils/log"
 )
 
 func testHttpResponse(t *testing.T, handler http.Handler, expectedResponse string) {

@@ -7,7 +7,7 @@ import (
 
 	"k8s.io/apimachinery/pkg/util/intstr"
 
-	ingressutil "github.com/argoproj/argo-rollouts/utils/ingress"
+	ingressutil "github.com/akshaybhatt14495/argo-rollouts/utils/ingress"
 	"github.com/stretchr/testify/assert"
 	extensionsv1beta1 "k8s.io/api/extensions/v1beta1"
 	k8serrors "k8s.io/apimachinery/pkg/api/errors"
@@ -19,8 +19,8 @@ import (
 	k8stesting "k8s.io/client-go/testing"
 	"k8s.io/client-go/tools/record"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	jsonutil "github.com/argoproj/argo-rollouts/utils/json"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	jsonutil "github.com/akshaybhatt14495/argo-rollouts/utils/json"
 )
 
 func fakeRollout(stableSvc, canarySvc, stableIng string, port int32) *v1alpha1.Rollout {

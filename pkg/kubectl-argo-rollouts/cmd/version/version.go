@@ -6,8 +6,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/options"
-	versionutils "github.com/argoproj/argo-rollouts/utils/version"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/options"
+	versionutils "github.com/akshaybhatt14495/argo-rollouts/utils/version"
 )
 
 const (

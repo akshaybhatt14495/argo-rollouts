@@ -5,8 +5,8 @@ import (
 
 	appsv1 "k8s.io/api/apps/v1"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/utils/defaults"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/defaults"
 )
 
 // AtDesiredReplicaCountsForCanary indicates if the rollout is at the desired state for the current step

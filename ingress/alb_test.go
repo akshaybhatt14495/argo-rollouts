@@ -11,8 +11,8 @@ import (
 	"k8s.io/apimachinery/pkg/util/intstr"
 	k8stesting "k8s.io/client-go/testing"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	ingressutil "github.com/argoproj/argo-rollouts/utils/ingress"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	ingressutil "github.com/akshaybhatt14495/argo-rollouts/utils/ingress"
 )
 
 const actionTemplate = `{

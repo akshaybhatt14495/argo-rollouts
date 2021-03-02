@@ -5,7 +5,7 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 
-	kubeclientmetrics "github.com/argoproj/argo-rollouts/utils/kubeclientmetrics"
+	kubeclientmetrics "github.com/akshaybhatt14495/argo-rollouts/utils/kubeclientmetrics"
 )
 
 const (

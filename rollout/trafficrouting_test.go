@@ -15,13 +15,13 @@ import (
 	"k8s.io/apimachinery/pkg/util/intstr"
 	"k8s.io/utils/pointer"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/rollout/trafficrouting/alb"
-	"github.com/argoproj/argo-rollouts/rollout/trafficrouting/istio"
-	"github.com/argoproj/argo-rollouts/rollout/trafficrouting/nginx"
-	"github.com/argoproj/argo-rollouts/rollout/trafficrouting/smi"
-	"github.com/argoproj/argo-rollouts/utils/conditions"
-	logutil "github.com/argoproj/argo-rollouts/utils/log"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/rollout/trafficrouting/alb"
+	"github.com/akshaybhatt14495/argo-rollouts/rollout/trafficrouting/istio"
+	"github.com/akshaybhatt14495/argo-rollouts/rollout/trafficrouting/nginx"
+	"github.com/akshaybhatt14495/argo-rollouts/rollout/trafficrouting/smi"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/conditions"
+	logutil "github.com/akshaybhatt14495/argo-rollouts/utils/log"
 )
 
 type FakeTrafficRoutingReconciler struct {

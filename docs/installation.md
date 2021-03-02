@@ -33,9 +33,9 @@ brew install argoproj/tap/kubectl-argo-rollouts
 
 ### Manual
 
-1. Install [Argo Rollouts Kubectl plugin](https://github.com/argoproj/argo-rollouts/releases) with curl.
+1. Install [Argo Rollouts Kubectl plugin](https://github.com/akshaybhatt14495/argo-rollouts/releases) with curl.
     ```shell
-    curl -LO https://github.com/argoproj/argo-rollouts/releases/latest/download/kubectl-argo-rollouts-darwin-amd64
+    curl -LO https://github.com/akshaybhatt14495/argo-rollouts/releases/latest/download/kubectl-argo-rollouts-darwin-amd64
     ```
 
     !!! tip "" 

@@ -299,7 +299,7 @@ kubectl apply -n argo-rollouts -f https://raw.githubusercontent.com/argoproj/arg
 - Renames golang field names for blueGreen/canary to eliminate two API violations (##206)
 
 #### Experiments
-Check out the [Experiment Docs](https://github.com/argoproj/argo-rollouts/blob/release-v0.6/docs/features/experiments.md) for more information.
+Check out the [Experiment Docs](https://github.com/akshaybhatt14495/argo-rollouts/blob/release-v0.6/docs/features/experiments.md) for more information.
 
 ###### Enhancements
 - Refactor experiments to use a context object (##208)
@@ -313,7 +313,7 @@ Check out the [Experiment Docs](https://github.com/argoproj/argo-rollouts/blob/r
 - Fix issue where a replicaset name collision could cause hot loop (##236)
 
 #### Analysis
-Check out the [Analysis Docs](https://github.com/argoproj/argo-rollouts/blob/release-v0.6/docs/features/analysis.md) for more information.
+Check out the [Analysis Docs](https://github.com/akshaybhatt14495/argo-rollouts/blob/release-v0.6/docs/features/analysis.md) for more information.
 ###### Enhancements
 - AnalysisRun AnalysisTemplate Spec (##166)
 - Initial analysis controller implementation (##168)
@@ -340,7 +340,7 @@ Check out the [Analysis Docs](https://github.com/argoproj/argo-rollouts/blob/rel
 
 
 #### Kubectl Plugin
-Check out the [kubectl plugin docs](https://github.com/argoproj/argo-rollouts/blob/release-v0.6/docs/features/kubectl-plugin.md) for more information.
+Check out the [kubectl plugin docs](https://github.com/akshaybhatt14495/argo-rollouts/blob/release-v0.6/docs/features/kubectl-plugin.md) for more information.
 
 ###### Enhancements
 - Implement argo rollouts kubectl plugin (##195)
@@ -426,7 +426,7 @@ kubectl create namespace argo-rollouts
 kubectl apply -n argo-rollouts -f https://raw.githubusercontent.com/argoproj/argo-rollouts/v0.3.2/manifests/install.yaml
 
 ## Important BlueGreen Strategy Change
-In v0.4.0, Argo Rollouts will have a breaking change where we will only pause BlueGreen rollouts if they have a new field called `autoPromotionEnabled` under the `spec.strategy.blueGreen` set to false. If the field is not listed, the default value will be true, and the rollout will immediately promote the new Rollout. This change was introduced to address https://github.com/argoproj/argo-rollouts/issues/80. 
+In v0.4.0, Argo Rollouts will have a breaking change where we will only pause BlueGreen rollouts if they have a new field called `autoPromotionEnabled` under the `spec.strategy.blueGreen` set to false. If the field is not listed, the default value will be true, and the rollout will immediately promote the new Rollout. This change was introduced to address https://github.com/akshaybhatt14495/argo-rollouts/issues/80. 
 
 To prepare for v0.4.0, v0.3.2 will introduce the `autoPromotionEnabled` field, but the controller will not act on the field. As a result, you can add the `autoPromotionEnabled` field without breaking your existing rollouts.
 

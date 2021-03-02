@@ -71,7 +71,7 @@ spec:
       autoPromotionEnabled: false
       # Automatically promotes the current ReplicaSet to active after the specified pause delay in seconds after the ReplicaSet becomes ready. If omitted, the Rollout enters and remains in a paused state until manually resumed by resetting spec.Paused to false. +optional
       autoPromotionSeconds: 30
-      # Adds a delay before scaling down the previous replicaset. If omitted, the Rollout waits 30 seconds before scaling down the previous ReplicaSet. A minimum of 30 seconds is recommended to ensure IP table propagation across the nodes in a cluster. See https://github.com/argoproj/argo-rollouts/issues/19#issuecomment-476329960 for more information
+      # Adds a delay before scaling down the previous replicaset. If omitted, the Rollout waits 30 seconds before scaling down the previous ReplicaSet. A minimum of 30 seconds is recommended to ensure IP table propagation across the nodes in a cluster. See https://github.com/akshaybhatt14495/argo-rollouts/issues/19#issuecomment-476329960 for more information
       scaleDownDelaySeconds: 30
       # Limits the number of old RS that can run at once before getting scaled down. Defaults to nil
       scaleDownDelayRevisionLimit: 2

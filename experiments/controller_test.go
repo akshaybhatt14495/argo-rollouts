@@ -27,11 +27,11 @@ import (
 	"k8s.io/client-go/util/workqueue"
 	"k8s.io/utils/pointer"
 
-	"github.com/argoproj/argo-rollouts/controller/metrics"
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/pkg/client/clientset/versioned/fake"
-	informers "github.com/argoproj/argo-rollouts/pkg/client/informers/externalversions"
-	"github.com/argoproj/argo-rollouts/utils/conditions"
+	"github.com/akshaybhatt14495/argo-rollouts/controller/metrics"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/client/clientset/versioned/fake"
+	informers "github.com/akshaybhatt14495/argo-rollouts/pkg/client/informers/externalversions"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/conditions"
 )
 
 var (

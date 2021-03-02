@@ -8,7 +8,7 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	corev1defaults "k8s.io/kubernetes/pkg/apis/core/v1"
 
-	"github.com/argoproj/argo-rollouts/utils/defaults"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/defaults"
 	"k8s.io/apimachinery/pkg/util/intstr"
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -19,7 +19,7 @@ import (
 	"k8s.io/kubernetes/pkg/apis/core"
 	apivalidation "k8s.io/kubernetes/pkg/apis/core/validation"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
 )
 
 const (

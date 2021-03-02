@@ -3,17 +3,17 @@ package validation
 import (
 	"fmt"
 
-	"github.com/argoproj/argo-rollouts/utils/conditions"
-	serviceutil "github.com/argoproj/argo-rollouts/utils/service"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/conditions"
+	serviceutil "github.com/akshaybhatt14495/argo-rollouts/utils/service"
 
-	ingressutil "github.com/argoproj/argo-rollouts/utils/ingress"
+	ingressutil "github.com/akshaybhatt14495/argo-rollouts/utils/ingress"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/api/extensions/v1beta1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/util/validation/field"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/rollout/trafficrouting/istio"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/rollout/trafficrouting/istio"
 )
 
 // Controller will validate references in reconciliation

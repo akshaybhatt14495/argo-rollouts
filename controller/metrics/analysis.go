@@ -5,10 +5,10 @@ import (
 	log "github.com/sirupsen/logrus"
 	"k8s.io/apimachinery/pkg/labels"
 
-	"github.com/argoproj/argo-rollouts/metricproviders"
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	rolloutlister "github.com/argoproj/argo-rollouts/pkg/client/listers/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/utils/analysis"
+	"github.com/akshaybhatt14495/argo-rollouts/metricproviders"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	rolloutlister "github.com/akshaybhatt14495/argo-rollouts/pkg/client/listers/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/analysis"
 )
 
 var (

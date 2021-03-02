@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/argoproj/argo-rollouts/test/fixtures"
+	"github.com/akshaybhatt14495/argo-rollouts/test/fixtures"
 )
 
 type ExperimentSuite struct {

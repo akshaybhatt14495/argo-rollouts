@@ -75,6 +75,6 @@ nav:
 - Contributing:
   - Contribution Guide: CONTRIBUTING.md
   - Environment Setup: getting-started/setup/index.md
-- Releases ⧉: https://github.com/argoproj/argo-rollouts/releases
-- Roadmap ⧉: https://github.com/argoproj/argo-rollouts/milestones
+- Releases ⧉: https://github.com/akshaybhatt14495/argo-rollouts/releases
+- Roadmap ⧉: https://github.com/akshaybhatt14495/argo-rollouts/milestones
 - Blog ⧉: https://blog.argoproj.io/

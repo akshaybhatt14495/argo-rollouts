@@ -13,11 +13,11 @@ import (
 	"k8s.io/apimachinery/pkg/labels"
 	patchtypes "k8s.io/apimachinery/pkg/types"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	analysisutil "github.com/argoproj/argo-rollouts/utils/analysis"
-	"github.com/argoproj/argo-rollouts/utils/annotations"
-	logutil "github.com/argoproj/argo-rollouts/utils/log"
-	replicasetutil "github.com/argoproj/argo-rollouts/utils/replicaset"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	analysisutil "github.com/akshaybhatt14495/argo-rollouts/utils/analysis"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/annotations"
+	logutil "github.com/akshaybhatt14495/argo-rollouts/utils/log"
+	replicasetutil "github.com/akshaybhatt14495/argo-rollouts/utils/replicaset"
 )
 
 const (

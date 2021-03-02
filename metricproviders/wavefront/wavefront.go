@@ -1,6 +1,7 @@
 package wavefront
 
 import (
+	"context"
 	"errors"
 	"fmt"
 	"io/ioutil"
@@ -14,9 +15,9 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/utils/evaluate"
-	metricutil "github.com/argoproj/argo-rollouts/utils/metric"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/evaluate"
+	metricutil "github.com/akshaybhatt14495/argo-rollouts/utils/metric"
 )
 
 const (
@@ -196,7 +197,7 @@ func NewWavefrontProvider(api WavefrontClientAPI, logCtx log.Entry) *Provider {
 // NewWavefrontAPI generates a Wavefront API client from the metric configuration
 func NewWavefrontAPI(metric v1alpha1.Metric, kubeclientset kubernetes.Interface) (WavefrontClientAPI, error) {
 	ns := Namespace()
-	secret, err := kubeclientset.CoreV1().Secrets(ns).Get(WavefrontTokensSecretName, metav1.GetOptions{})
+	secret, err := kubeclientset.CoreV1().Secrets(ns).Get(context.Background(), WavefrontTokensSecretName, metav1.GetOptions{})
 	if err != nil {
 		return nil, err
 	}

@@ -16,10 +16,10 @@ import (
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/util/workqueue"
 
-	rolloutclientset "github.com/argoproj/argo-rollouts/pkg/client/clientset/versioned"
-	rolloutinformers "github.com/argoproj/argo-rollouts/pkg/client/informers/externalversions"
-	rolloutlisters "github.com/argoproj/argo-rollouts/pkg/client/listers/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/pkg/kubectl-argo-rollouts/info"
+	rolloutclientset "github.com/akshaybhatt14495/argo-rollouts/pkg/client/clientset/versioned"
+	rolloutinformers "github.com/akshaybhatt14495/argo-rollouts/pkg/client/informers/externalversions"
+	rolloutlisters "github.com/akshaybhatt14495/argo-rollouts/pkg/client/listers/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/kubectl-argo-rollouts/info"
 )
 
 // viewController is a mini controller which allows printing of live updates to rollouts

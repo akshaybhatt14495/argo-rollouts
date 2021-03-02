@@ -1,6 +1,7 @@
 package alb
 
 import (
+	"context"
 	"fmt"
 	"strconv"
 
@@ -15,11 +16,11 @@ import (
 	"k8s.io/client-go/tools/record"
 	"k8s.io/utils/pointer"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/utils/diff"
-	ingressutil "github.com/argoproj/argo-rollouts/utils/ingress"
-	jsonutil "github.com/argoproj/argo-rollouts/utils/json"
-	logutil "github.com/argoproj/argo-rollouts/utils/log"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/diff"
+	ingressutil "github.com/akshaybhatt14495/argo-rollouts/utils/ingress"
+	jsonutil "github.com/akshaybhatt14495/argo-rollouts/utils/json"
+	logutil "github.com/akshaybhatt14495/argo-rollouts/utils/log"
 )
 
 const (
@@ -88,7 +89,7 @@ func (r *Reconciler) Reconcile(desiredWeight int32) error {
 	r.log.WithField("patch", string(patch)).Debug("applying ALB Ingress patch")
 	r.log.WithField("desiredWeight", desiredWeight).Info("updating ALB Ingress")
 	r.cfg.Recorder.Event(r.cfg.Rollout, corev1.EventTypeNormal, "PatchingALBIngress", fmt.Sprintf("Updating Ingress `%s` to desiredWeight '%d'", ingressName, desiredWeight))
-	_, err = r.cfg.Client.ExtensionsV1beta1().Ingresses(ingress.Namespace).Patch(ingress.Name, types.MergePatchType, patch)
+	_, err = r.cfg.Client.ExtensionsV1beta1().Ingresses(ingress.Namespace).Patch(context.Background(), ingress.Name, types.MergePatchType, patch, metav1.PatchOptions{})
 	if err != nil {
 		r.log.WithField("err", err.Error()).Error("error patching alb ingress")
 		return fmt.Errorf("error patching alb ingress `%s`: %v", ingressName, err)

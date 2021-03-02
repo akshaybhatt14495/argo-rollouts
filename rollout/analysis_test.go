@@ -12,9 +12,9 @@ import (
 	"k8s.io/kubernetes/pkg/controller"
 	"k8s.io/utils/pointer"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	analysisutil "github.com/argoproj/argo-rollouts/utils/analysis"
-	"github.com/argoproj/argo-rollouts/utils/conditions"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	analysisutil "github.com/akshaybhatt14495/argo-rollouts/utils/analysis"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/conditions"
 )
 
 func analysisTemplate(name string) *v1alpha1.AnalysisTemplate {
@@ -1445,7 +1445,7 @@ func TestDoNotCreateBackgroundAnalysisRunOnNewCanaryRollout(t *testing.T) {
 }
 
 // Same as TestDoNotCreateBackgroundAnalysisRunOnNewCanaryRollout but when Status.StableRS is ""
-// https://github.com/argoproj/argo-rollouts/issues/721
+// https://github.com/akshaybhatt14495/argo-rollouts/issues/721
 func TestDoNotCreateBackgroundAnalysisRunOnNewCanaryRolloutStableRSEmpty(t *testing.T) {
 	f := newFixture(t)
 	defer f.Close()

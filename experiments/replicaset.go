@@ -13,11 +13,11 @@ import (
 	"k8s.io/kubernetes/pkg/controller"
 	labelsutil "k8s.io/kubernetes/pkg/util/labels"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/utils/conditions"
-	experimentutil "github.com/argoproj/argo-rollouts/utils/experiment"
-	logutil "github.com/argoproj/argo-rollouts/utils/log"
-	replicasetutil "github.com/argoproj/argo-rollouts/utils/replicaset"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/conditions"
+	experimentutil "github.com/akshaybhatt14495/argo-rollouts/utils/experiment"
+	logutil "github.com/akshaybhatt14495/argo-rollouts/utils/log"
+	replicasetutil "github.com/akshaybhatt14495/argo-rollouts/utils/replicaset"
 	log "github.com/sirupsen/logrus"
 )
 

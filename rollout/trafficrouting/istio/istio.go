@@ -13,9 +13,9 @@ import (
 	"k8s.io/client-go/dynamic/dynamiclister"
 	"k8s.io/client-go/tools/record"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	istioutil "github.com/argoproj/argo-rollouts/utils/istio"
-	logutil "github.com/argoproj/argo-rollouts/utils/log"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	istioutil "github.com/akshaybhatt14495/argo-rollouts/utils/istio"
+	logutil "github.com/akshaybhatt14495/argo-rollouts/utils/log"
 )
 
 const Type = "Istio"

@@ -25,4 +25,4 @@ configurations:
 ```
 
 A example kustomize app demonstrating the ability to use transformers with Rollouts can be seen
-[here](https://github.com/argoproj/argo-rollouts/blob/master/docs/features/kustomize/example).
+[here](https://github.com/akshaybhatt14495/argo-rollouts/blob/master/docs/features/kustomize/example).

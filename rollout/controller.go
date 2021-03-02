@@ -6,13 +6,13 @@ import (
 	"reflect"
 	"time"
 
-	istioutil "github.com/argoproj/argo-rollouts/utils/istio"
+	istioutil "github.com/akshaybhatt14495/argo-rollouts/utils/istio"
 
-	"github.com/argoproj/argo-rollouts/rollout/trafficrouting/istio"
+	"github.com/akshaybhatt14495/argo-rollouts/rollout/trafficrouting/istio"
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/client-go/dynamic/dynamiclister"
 
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/validation"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/validation"
 	smiclientset "github.com/servicemeshinterface/smi-sdk-go/pkg/gen/client/split/clientset/versioned"
 	log "github.com/sirupsen/logrus"
 	appsv1 "k8s.io/api/apps/v1"
@@ -39,18 +39,18 @@ import (
 	"k8s.io/kubernetes/pkg/controller"
 	"k8s.io/utils/pointer"
 
-	"github.com/argoproj/argo-rollouts/controller/metrics"
-	register "github.com/argoproj/argo-rollouts/pkg/apis/rollouts"
-	"github.com/argoproj/argo-rollouts/pkg/apis/rollouts/v1alpha1"
-	clientset "github.com/argoproj/argo-rollouts/pkg/client/clientset/versioned"
-	informers "github.com/argoproj/argo-rollouts/pkg/client/informers/externalversions/rollouts/v1alpha1"
-	listers "github.com/argoproj/argo-rollouts/pkg/client/listers/rollouts/v1alpha1"
-	"github.com/argoproj/argo-rollouts/utils/conditions"
-	controllerutil "github.com/argoproj/argo-rollouts/utils/controller"
-	"github.com/argoproj/argo-rollouts/utils/defaults"
-	logutil "github.com/argoproj/argo-rollouts/utils/log"
-	serviceutil "github.com/argoproj/argo-rollouts/utils/service"
-	unstructuredutil "github.com/argoproj/argo-rollouts/utils/unstructured"
+	"github.com/akshaybhatt14495/argo-rollouts/controller/metrics"
+	register "github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts"
+	"github.com/akshaybhatt14495/argo-rollouts/pkg/apis/rollouts/v1alpha1"
+	clientset "github.com/akshaybhatt14495/argo-rollouts/pkg/client/clientset/versioned"
+	informers "github.com/akshaybhatt14495/argo-rollouts/pkg/client/informers/externalversions/rollouts/v1alpha1"
+	listers "github.com/akshaybhatt14495/argo-rollouts/pkg/client/listers/rollouts/v1alpha1"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/conditions"
+	controllerutil "github.com/akshaybhatt14495/argo-rollouts/utils/controller"
+	"github.com/akshaybhatt14495/argo-rollouts/utils/defaults"
+	logutil "github.com/akshaybhatt14495/argo-rollouts/utils/log"
+	serviceutil "github.com/akshaybhatt14495/argo-rollouts/utils/service"
+	unstructuredutil "github.com/akshaybhatt14495/argo-rollouts/utils/unstructured"
 )
 
 const (
@@ -379,7 +379,7 @@ func (c *Controller) syncHandler(key string) error {
 	}
 
 	// In order to work with HPA, the rollout.Spec.Replica field cannot be nil. As a result, the controller will update
-	// the rollout to have the replicas field set to the default value. see https://github.com/argoproj/argo-rollouts/issues/119
+	// the rollout to have the replicas field set to the default value. see https://github.com/akshaybhatt14495/argo-rollouts/issues/119
 	if rollout.Spec.Replicas == nil {
 		logCtx.Info("Setting .Spec.Replica to 1 from nil")
 		r.Spec.Replicas = pointer.Int32Ptr(defaults.DefaultReplicas)
